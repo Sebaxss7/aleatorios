@@ -51,10 +51,24 @@ agregarNota=function(nota) {
 }
 
 function generarNumeroAleatorio() {
-    let numeroAleatorio = Math.random(); 
-    let aleatorioMultiplicado = numeroAleatorio * 100; // Lo multiplica por 100 (ej: 45.6)
-    let aleatorioEntero = parseInt(aleatorioMultiplicado); // Le quita los decimales (ej: 45)
-    let valorFinal = aleatorioEntero + 1; // Le sumamos 1 para que sea de 1 a 100 (ej: 46)
-    
+    let numeroAleatorio = Math.random();
+    let aleatorioMultiplicado = numeroAleatorio * 100;
+    let aleatorioEntero = parseInt(aleatorioMultiplicado);
+    let valorFinal = aleatorioEntero + 1;
     return valorFinal;
+}
+
+function generarAleatorios() {
+    let aleatorios = [];
+    let cantidad = recuperarInt("txtNota");
+    if (isNaN(cantidad) || cantidad < 5 || cantidad > 20) {
+        alert("Error: El número debe estar entre 5 y 20 incluidos.");
+    return;
+    }
+    for (let i = 0; i < cantidad; i++) {
+        console.log("Valor del índice iterando: " + i);
+        let numeroGenerado = generarNumeroAleatorio();
+        aleatorios.push(numeroGenerado);
+        console.log("Arreglo aleatorios final:", aleatorios);
+}
 }
