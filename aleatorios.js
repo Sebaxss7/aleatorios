@@ -69,6 +69,22 @@ function generarAleatorios() {
         console.log("Valor del índice iterando: " + i);
         let numeroGenerado = generarNumeroAleatorio();
         aleatorios.push(numeroGenerado);
-        console.log("Arreglo aleatorios final:", aleatorios);
+    }
+    mostrarResultados(aleatorios);
 }
+
+function mostrarResultados(arregloNumeros) {
+    let cmpTabla = document.getElementById("divTabla");
+    let contenidoTabla = "<table>";
+    let miNumero;
+
+    for (let i = 0; i < arregloNumeros.length; i++) {
+        miNumero = arregloNumeros[i];
+        contenidoTabla += "<tr><td>";
+        contenidoTabla += miNumero;
+        contenidoTabla += "</td></tr>";
+    }
+
+    contenidoTabla += "</table>";
+    cmpTabla.innerHTML = contenidoTabla;
 }
