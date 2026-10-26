@@ -49,3 +49,12 @@ agregarNota=function(nota) {
     notas.push(nota);
     mostrarNotas()
 }
+
+function generarNumeroAleatorio() {
+    let numeroAleatorio = Math.random(); 
+    let aleatorioMultiplicado = numeroAleatorio * 100; // Lo multiplica por 100 (ej: 45.6)
+    let aleatorioEntero = parseInt(aleatorioMultiplicado); // Le quita los decimales (ej: 45)
+    let valorFinal = aleatorioEntero + 1; // Le sumamos 1 para que sea de 1 a 100 (ej: 46)
+    
+    return valorFinal;
+}
