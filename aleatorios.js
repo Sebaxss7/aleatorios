@@ -60,7 +60,7 @@ function generarNumeroAleatorio() {
 
 function generarAleatorios() {
     let aleatorios = [];
-    let cantidad = recuperarInt("txtNota");
+    let cantidad = recuperarInt("txtCantidad");
     if (isNaN(cantidad) || cantidad < 5 || cantidad > 20) {
         alert("Error: El número debe estar entre 5 y 20 incluidos.");
     return;
